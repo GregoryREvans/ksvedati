@@ -62,15 +62,18 @@ from .lib import (
     triple_swell,
     zero_padding_glissando,
 )
-from .materials.instruments import instruments
+from .materials.instruments import instruments, duet_instruments
 from .materials.pitch import potamia_pitches
 from .materials.rhythm import E_rhythm
-from .materials.score_structure import score
+from .materials.score_structure import score, duet
 from .materials.time_signatures import (
     all_signatures,
     fermata_measures_01,
     reduced_signatures_01,
     signatures_01,
+    fermata_measures_02,
+    reduced_signatures_02,
+    signatures_02,
 )
 
 __all__ = [

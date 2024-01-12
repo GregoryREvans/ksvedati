@@ -89,6 +89,7 @@
 		\type Engraver_group
 		%{ \consists Text_engraver
 		\consists Text_spanner_engraver %}
+		\consists #Measure_attached_spanner_engraver
 	}
 	\context {
         \name TimeSignatureContext
@@ -131,6 +132,11 @@
 		\override TimeSignature.whiteout = ##t
         %{ \override VerticalAxisGroup.default-staff-staff-spacing = #'((basic-distance . 13) (minimum-distance . 13) (padding . 4) (stretchability . 0)) %}
 		%{ barNumberFormatter = #oval-bar-numbers %}
+
+		\override MeasureCounter.font-encoding = #'latin1
+		\override MeasureCounter.font-size = 4
+		\override MeasureCounter.outside-staff-padding = 0
+		\override MeasureCounter.outside-staff-horizontal-padding = #0
     }
 	\context {
 		\Score
@@ -199,6 +205,9 @@
 		autoBeaming = ##f
 		barNumberFormatter = #oval-bar-numbers
 		tupletFullLength = ##t
+
+		\override VoltaBracketSpanner.Y-offset = #6 %?
+		\override MeasureCounter.Y-offset = #6 %?
 	}
 	\context {
 		\Voice

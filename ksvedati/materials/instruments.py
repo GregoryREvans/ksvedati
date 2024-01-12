@@ -28,6 +28,11 @@ instruments = [
     instrument_four,
 ]
 
+duet_instruments = [
+    instrument_one,
+    instrument_four,
+]
+
 voices = len(instruments)
 
 voice_to_name_dict = {
